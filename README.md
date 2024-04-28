@@ -7,7 +7,7 @@ Este repositorio contiene instrucciones detalladas para configurar Jenkins utili
 <div style="text-align: left">
     <p>
         <a href="https://docs.docker.com/" target="_blank"> 
-            <img alt="Docker" src="https://openwhisk.apache.org/images/deployments/logo-docker-compose-text.svg" height="60" width="60" style="vertical-align: bottom;">
+            <img alt="Docker" src="https://miro.medium.com/v2/resize:fit:453/1*QVFjsW8gyIXeCUJucmK4XA.png" height="60" width="60" style="vertical-align: bottom;">
         </a>
         <a href="https://docs.github.com/es/actions" target="_blank">
             <img src="https://media.dev.to/cdn-cgi/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fft4iy3x3bugjdroygk1b.png" width="60" alt="Github Actions Logo" style="vertical-align: bottom;">
