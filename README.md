@@ -47,7 +47,7 @@ docker-compose up -d
 ```
 
 <p align="left">
-  <img src="Img/paso2.png" alt="captura" width="400" height="300" />
+  <img src="Img/paso2.png" alt="captura" width="400" height="250" />
 </p>
 
 
@@ -79,16 +79,20 @@ docker ps -a
 
 ## Paso 5: Ver los registros del Contenedor
 
-Para obtener información sobre el inicio y la configuración inicial del servidor Jenkins en el contenedor, ejecuta:
+Dado que el contenedor está en ejecución, deberías poder ver los registros del contenedor utilizando el siguiente comando:
 
 ```bash
 docker logs <ID_del_Contenedor>
 ```
 
+Sustituye `<ID_del_Contenedor>` con el ID específico del contenedor de Jenkins. Estos registros proporcionan información sobre el inicio y la configuración inicial del servidor Jenkins en el contenedor. La contraseña generada automáticamente es importante ya que se necesitará para completar la configuración inicial de Jenkins a través de la interfaz web.
+
 <p align="left">
   <img src="Img/paso5.png" alt="captura" width="400" height="250" />
 </p>
 
+
+Otra forma de obtener la contraseña generada automáticamente para la configuración inicial de Jenkins es desde dentro del contenedor. Puedes utilizar el comando `docker exec` seguido del ID del contenedor y el comando `cat` para leer el contenido del archivo que contiene la contraseña. Aquí está el comando completo:
 
 ```bash
 docker exec <ID_del_Contenedor> cat /var/jenkins_home/secrets/initialAdminPassword
