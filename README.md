@@ -73,7 +73,7 @@ docker ps -a
 ```
 
 <p align="left">
-  <img src="Img/paso4.png" alt="captura" width="400" height="150" />
+  <img src="Img/paso4.png" alt="captura" width="400" height="70" />
 </p>
 
 
@@ -95,7 +95,7 @@ docker exec <ID_del_Contenedor> cat /var/jenkins_home/secrets/initialAdminPasswo
 ```
 
 <p align="left">
-  <img src="Img/paso5-2.png" alt="captura" width="400" height="150" />
+  <img src="Img/paso5-2.png" alt="captura" width="400" height="70" />
 </p>
 
 ## Paso 6: Obtener la Contraseña de Administrador
