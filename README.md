@@ -60,7 +60,7 @@ docker volume inspect jenkins_sa
 ```
 
 <p align="left">
-  <img src="Img/paso3.png" alt="captura" width="400" height="300" />
+  <img src="Img/paso3.png" alt="captura" width="400" height="250" />
 </p>
 
 
@@ -73,7 +73,7 @@ docker ps -a
 ```
 
 <p align="left">
-  <img src="Img/paso4.png" alt="captura" width="400" height="30" />
+  <img src="Img/paso4.png" alt="captura" width="400" height="20" />
 </p>
 
 
@@ -86,7 +86,7 @@ docker logs <ID_del_Contenedor>
 ```
 
 <p align="left">
-  <img src="Img/paso5.png" alt="captura" width="400" height="300" />
+  <img src="Img/paso5.png" alt="captura" width="400" height="250" />
 </p>
 
 
@@ -95,7 +95,7 @@ docker exec <ID_del_Contenedor> cat /var/jenkins_home/secrets/initialAdminPasswo
 ```
 
 <p align="left">
-  <img src="Img/paso5-2.png" alt="captura" width="400" height="40" />
+  <img src="Img/paso5-2.png" alt="captura" width="400" height="20" />
 </p>
 
 ## Paso 6: Obtener la Contraseña de Administrador
