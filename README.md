@@ -85,12 +85,16 @@ Dado que el contenedor está en ejecución, deberías poder ver los registros de
 docker logs <ID_del_Contenedor>
 ```
 
-Sustituye `<ID_del_Contenedor>` con el ID específico del contenedor de Jenkins. Estos registros proporcionan información sobre el inicio y la configuración inicial del servidor Jenkins en el contenedor. La contraseña generada automáticamente es importante ya que se necesitará para completar la configuración inicial de Jenkins a través de la interfaz web.
+Sustituye `<ID_del_Contenedor>` con el ID específico del contenedor de Jenkins. Estos registros proporcionan información sobre el inicio y la configuración inicial del servidor Jenkins en el contenedor. La contraseña generada automáticamente es importante ya que se necesitará para completar la configuración inicial de Jenkins a través de la interfaz web, al final de los logs puedes ver la contraseña.
 
 <p align="left">
   <img src="Img/paso5.png" alt="captura" width="400" height="250" />
 </p>
 
+
+
+
+## Paso 6: Obtener la Contraseña de Administrador
 
 Otra forma de obtener la contraseña generada automáticamente para la configuración inicial de Jenkins es desde dentro del contenedor. Puedes utilizar el comando `docker exec` seguido del ID del contenedor y el comando `cat` para leer el contenido del archivo que contiene la contraseña. Aquí está el comando completo:
 
@@ -102,33 +106,111 @@ docker exec <ID_del_Contenedor> cat /var/jenkins_home/secrets/initialAdminPasswo
   <img src="Img/paso5-2.png" alt="captura" width="400" height="20" />
 </p>
 
-## Paso 6: Obtener la Contraseña de Administrador
-
-Para obtener la contraseña generada automáticamente para la configuración inicial de Jenkins, utiliza el siguiente comando:
-
-```bash
-docker exec <ID_del_Contenedor> cat /var/jenkins_home/secrets/initialAdminPassword
-```
-
 ## Paso 7: Acceder a Jenkins
 
 Una vez que Jenkins esté en funcionamiento, accede a él desde tu navegador web usando `localhost:8080`. Utiliza la contraseña de administrador obtenida en el paso anterior para completar la configuración inicial.
 
+<p align="left">
+  <img src="Img/paso6.png" alt="captura" width="400" height="20" />
+</p>
+
+
 ## Paso 8: Configurar Jenkins
 
-Sigue las instrucciones en la interfaz web de Jenkins para configurar usuarios, plugins y cualquier otra configuración necesaria.
+Selecciona `Select plugins to install`, para buscar el plugins de node que se requiere
+
+<p align="left">
+  <img src="Img/paso7.png" alt="captura" width="400" height="20" />
+</p>
+
+Se debe configurar el usuario `admin`:
+
+<p align="left">
+  <img src="Img/paso8.png" alt="captura" width="400" height="20" />
+</p>
+
+Se confirua la `Url` de jenkins
+
+<p align="left">
+  <img src="Img/paso8-2.png" alt="captura" width="400" height="20" />
+</p>
+
 
 ## Paso 9: Instalar Plugins
 
-En Jenkins, selecciona "Manage Jenkins" en el menú principal y luego "Manage Plugins". Desde allí, puedes buscar e instalar los plugins necesarios para tu proyecto.
+En Jenkins, En el apartado de “Tools” configuramos la versión de node que necesitamos, en este caso es la 10.15.2
+
+<p align="left">
+  <img src="Img/paso9.png" alt="captura" width="400" height="20" />
+</p>
+
+<p align="left">
+  <img src="Img/paso9-2.png" alt="captura" width="400" height="20" />
+</p>
+
 
 ## Paso 10: Configurar Herramientas
 
-En la configuración global de Jenkins, puedes configurar las herramientas necesarias para tu proyecto, como JDK, Maven, Node.js, etc.
+### Creación del primer pipeline
+  - En el panel de administración seleccionamos `Nueva tarea` para la creación del pipeline.
+  -	Asignamos un `nombre` a nuestra tarea
+  -	Elegimos `Crear proyecto de estilo libre`
+
+<p align="left">
+  <img src="Img/paso10.png" alt="captura" width="400" height="20" />
+</p>
+
+### Haremos la configuración
+  -	Damos la url del repositorio de nuestro proyecto y seleccionamos la rama en mi caso la `main`
+
+<p align="left">
+  <img src="Img/paso10-2.png" alt="captura" width="400" height="20" />
+</p>
+
+  -	Seleccionamos el `Entorno de ejecución`.        
+
+<p align="left">
+  <img src="Img/paso10-3.png" alt="captura" width="400" height="20" />
+</p>
+
+  -	Seleccionamos en `Build` steps `Ejecutar en línea de comandos shell`
+
+<p align="left">
+  <img src="Img/paso10-4.png" alt="captura" width="400" height="20" />
+</p>
+
+  -	Pasamos estos comandos :
+
+```bash
+npm install
+npm run build
+node app.js
+```
+<p align="left">
+  <img src="Img/paso10-5.png" alt="captura" width="400" height="20" />
+</p>
+
+  -	Le daremos en guardar.
+
+<p align="left">
+  <img src="Img/paso10-6.png" alt="captura" width="400" height="20" />
+</p>
+
 
 ## Paso 11: Crear un Pipeline
 
-En Jenkins, crea un nuevo pipeline para tu proyecto. Puedes definir los pasos del pipeline según las necesidades de tu proyecto, como la compilación, las pruebas y la implementación.
+  -	Ejecutaremos el pipeline, luego iremos a Console Ouput, para ver la dirección del servidor que esta corriendo.
+
+<p align="left">
+  <img src="Img/paso11.png" alt="captura" width="400" height="20" />
+</p>
+
+  -	Por ultimo veremos la respuesta del servidor :
+
+<p align="left">
+  <img src="Img/paso11-2.png" alt="captura" width="400" height="20" />
+</p>
+
 
 ## Jenkins Lab
 
