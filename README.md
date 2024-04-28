@@ -14,11 +14,13 @@ services:
     image: jenkins/jenkins:lts
     ports:
       - "8080:8080"
+      - "3000:3000"
     volumes:
       - jenkins_sa:/var/jenkins_home
 volumes:
   jenkins_sa:
     name: "jenkins_sa"
+
 ```
 
 ## Paso 2: Levantar el Contenedor de Jenkins
