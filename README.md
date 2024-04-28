@@ -103,7 +103,7 @@ docker exec <ID_del_Contenedor> cat /var/jenkins_home/secrets/initialAdminPasswo
 ```
 
 <p align="left">
-  <img src="Img/paso5-2.png" alt="captura" width="400" height="250" />
+  <img src="Img/paso5-2.png" alt="captura" width="400" height="20" />
 </p>
 
 ## Paso 7: Acceder a Jenkins
@@ -145,7 +145,7 @@ En Jenkins, En el apartado de “Tools” configuramos la versión de node que n
 </p>
 
 <p align="left">
-  <img src="Img/paso9-2.png" alt="captura" width="400" height="250" />
+  <img src="Img/Paso9-2.png" alt="captura" width="400" height="250" />
 </p>
 
 
@@ -164,19 +164,19 @@ En Jenkins, En el apartado de “Tools” configuramos la versión de node que n
   -	Damos la url del repositorio de nuestro proyecto y seleccionamos la rama en mi caso la `main`
 
 <p align="left">
-  <img src="Img/paso10-2.png" alt="captura" width="400" height="20" />
+  <img src="Img/paso10-2.png" alt="captura" width="400" height="250" />
 </p>
 
   -	Seleccionamos el `Entorno de ejecución`.        
 
 <p align="left">
-  <img src="Img/paso10-3.png" alt="captura" width="400" height="20" />
+  <img src="Img/paso10-3.png" alt="captura" width="400" height="250" />
 </p>
 
   -	Seleccionamos en `Build` steps `Ejecutar en línea de comandos shell`
 
 <p align="left">
-  <img src="Img/paso10-4.png" alt="captura" width="400" height="20" />
+  <img src="Img/paso10-4.png" alt="captura" width="400" height="250" />
 </p>
 
   -	Pasamos estos comandos :
@@ -187,13 +187,13 @@ npm run build
 node app.js
 ```
 <p align="left">
-  <img src="Img/paso10-5.png" alt="captura" width="400" height="20" />
+  <img src="Img/paso10-5.png" alt="captura" width="400" height="250" />
 </p>
 
   -	Le daremos en guardar.
 
 <p align="left">
-  <img src="Img/paso10-6.png" alt="captura" width="400" height="20" />
+  <img src="Img/paso10-6.png" alt="captura" width="400" height="250" />
 </p>
 
 
@@ -202,13 +202,13 @@ node app.js
   -	Ejecutaremos el pipeline, luego iremos a Console Ouput, para ver la dirección del servidor que esta corriendo.
 
 <p align="left">
-  <img src="Img/paso11.png" alt="captura" width="400" height="20" />
+  <img src="Img/paso11.png" alt="captura" width="400" height="250" />
 </p>
 
   -	Por ultimo veremos la respuesta del servidor :
 
 <p align="left">
-  <img src="Img/paso11-2.png" alt="captura" width="400" height="20" />
+  <img src="Img/paso11-2.png" alt="captura" width="400" height="250" />
 </p>
 
 
