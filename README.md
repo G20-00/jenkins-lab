@@ -9,8 +9,8 @@ Este repositorio contiene instrucciones detalladas para configurar Jenkins utili
         <a href="https://docs.docker.com/" target="_blank"> 
             <img alt="Docker" src="https://miro.medium.com/v2/resize:fit:453/1*QVFjsW8gyIXeCUJucmK4XA.png" height="80" width="80" style="vertical-align: bottom;">
         </a>
-        <a href="https://docs.github.com/es/actions" target="_blank">
-            <img src="https://brandslogos.com/wp-content/uploads/images/jenkins-logo-1.png" height="80" width="60" alt="Github Actions Logo" style="vertical-align: bottom;">
+        <a href="https://www.jenkins.io" target="_blank">
+            <img src="https://brandslogos.com/wp-content/uploads/images/jenkins-logo-1.png" height="80" width="60" alt="Jenkins" style="vertical-align: bottom;">
         </a>
     </p>
 </div>
@@ -46,6 +46,10 @@ Para iniciar los servicios definidos en tu archivo `docker-compose.yml`. ejecuta
 docker-compose up -d
 ```
 
+<p align="left">
+  <img src="Img/paso2.png" alt="captura" width="400" height="300" />
+</p>
+
 
 ## Paso 3: Verificar la Persistencia de Datos
 
@@ -55,13 +59,23 @@ Para verificar que los datos se están almacenando correctamente en el volumen `
 docker volume inspect jenkins_sa
 ```
 
-Este comando proporcionará información sobre el volumen, incluida la ubicación en el sistema de archivos del host donde se almacenan los datos.
+<p align="left">
+  <img src="Img/paso3.png" alt="captura" width="400" height="300" />
+</p>
+
+
+Este comando proporciona información detallada sobre el volumen, incluida la fecha y hora de creación, el controlador de volumen utilizado, las etiquetas asociadas, la ubicación en el sistema de archivos del host donde se monta el volumen y otras opciones adicionales, si se especifican. Esto te permitirá confirmar que los datos se están almacenando correctamente y comprender dónde y cómo están guardados en el sistema de archivos del host.
 
 ## Paso 4: Verificar el ID del Contenedor
 
 ```bash
 docker ps -a
 ```
+
+<p align="left">
+  <img src="Img/paso4.png" alt="captura" width="400" height="300" />
+</p>
+
 
 ## Paso 5: Ver los registros del Contenedor
 
@@ -70,6 +84,19 @@ Para obtener información sobre el inicio y la configuración inicial del servid
 ```bash
 docker logs <ID_del_Contenedor>
 ```
+
+<p align="left">
+  <img src="Img/paso5.png" alt="captura" width="400" height="300" />
+</p>
+
+
+```bash
+docker exec <ID_del_Contenedor> cat /var/jenkins_home/secrets/initialAdminPassword
+```
+
+<p align="left">
+  <img src="Img/paso5-2.png" alt="captura" width="400" height="300" />
+</p>
 
 ## Paso 6: Obtener la Contraseña de Administrador
 
