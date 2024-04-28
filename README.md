@@ -2,6 +2,21 @@
 
 Este repositorio contiene instrucciones detalladas para configurar Jenkins utilizando Docker Compose. A continuación, se describen los pasos necesarios para asegurar la persistencia de datos, configurar Jenkins y crear un pipeline básico.
 
+## **_Construido con_** 
+
+<div style="text-align: left">
+    <p>
+        <a href="https://docs.docker.com/" target="_blank"> 
+            <img alt="Docker" src="https://openwhisk.apache.org/images/deployments/logo-docker-compose-text.svg" height="60" width="60" style="vertical-align: bottom;">
+        </a>
+        <a href="https://docs.github.com/es/actions" target="_blank">
+            <img src="https://media.dev.to/cdn-cgi/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fft4iy3x3bugjdroygk1b.png" width="60" alt="Github Actions Logo" style="vertical-align: bottom;">
+        </a>
+    </p>
+</div>
+
+---
+
 ## Paso 1: Definir un Volumen en Docker Compose
 
 En el archivo `docker-compose.yml`, definimos un volumen para almacenar los datos de Jenkins. Esto garantiza que los datos persistan incluso si el contenedor se detiene o se elimina.
@@ -25,11 +40,12 @@ volumes:
 
 ## Paso 2: Levantar el Contenedor de Jenkins
 
-Ejecuta el siguiente comando en la terminal dentro del directorio donde se encuentra tu archivo `docker-compose.yml`.
+Para iniciar los servicios definidos en tu archivo `docker-compose.yml`. ejecuta el siguiente comando en tu terminal desde la ubicación donde se encuentra dicho archivo. Esto levantará los contenedores de Docker en segundo plano, permitiendo que Jenkins se ejecute de manera continua sin bloquear la terminal:
 
 ```bash
 docker-compose up -d
 ```
+
 
 ## Paso 3: Verificar la Persistencia de Datos
 
@@ -112,3 +128,12 @@ docker exec <ID_del_Contenedor> cat /var/jenkins_home/secrets/initialAdminPasswo
 ```
 
 ¡Listo! Ahora tienes Jenkins configurado con Docker Compose y un pipeline básico listo para ejecutar tu proyecto.
+
+
+---
+
+## **_Autor_** 
+
+<div style="text-align: left">
+    <a href="https://github.com/G20-00" target="_blank"> <img alt="G20-00" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/70019070?v=4&h=60&w=60&fit=cover&mask=circle"></a>
+</div>
