@@ -103,7 +103,7 @@ docker exec <ID_del_Contenedor> cat /var/jenkins_home/secrets/initialAdminPasswo
 ```
 
 <p align="left">
-  <img src="Img/paso5-2.png" alt="captura" width="400" height="20" />
+  <img src="Img/paso5-2.png" alt="captura" width="400" height="250" />
 </p>
 
 ## Paso 7: Acceder a Jenkins
@@ -111,7 +111,7 @@ docker exec <ID_del_Contenedor> cat /var/jenkins_home/secrets/initialAdminPasswo
 Una vez que Jenkins esté en funcionamiento, accede a él desde tu navegador web usando `localhost:8080`. Utiliza la contraseña de administrador obtenida en el paso anterior para completar la configuración inicial.
 
 <p align="left">
-  <img src="Img/paso6.png" alt="captura" width="400" height="20" />
+  <img src="Img/paso6.png" alt="captura" width="400" height="250" />
 </p>
 
 
@@ -120,19 +120,19 @@ Una vez que Jenkins esté en funcionamiento, accede a él desde tu navegador web
 Selecciona `Select plugins to install`, para buscar el plugins de node que se requiere
 
 <p align="left">
-  <img src="Img/paso7.png" alt="captura" width="400" height="20" />
+  <img src="Img/paso7.png" alt="captura" width="400" height="250" />
 </p>
 
 Se debe configurar el usuario `admin`:
 
 <p align="left">
-  <img src="Img/paso8.png" alt="captura" width="400" height="20" />
+  <img src="Img/paso8.png" alt="captura" width="400" height="250" />
 </p>
 
 Se confirua la `Url` de jenkins
 
 <p align="left">
-  <img src="Img/paso8-2.png" alt="captura" width="400" height="20" />
+  <img src="Img/paso8-2.png" alt="captura" width="400" height="250" />
 </p>
 
 
@@ -141,11 +141,11 @@ Se confirua la `Url` de jenkins
 En Jenkins, En el apartado de “Tools” configuramos la versión de node que necesitamos, en este caso es la 10.15.2
 
 <p align="left">
-  <img src="Img/paso9.png" alt="captura" width="400" height="20" />
+  <img src="Img/paso9.png" alt="captura" width="400" height="250" />
 </p>
 
 <p align="left">
-  <img src="Img/paso9-2.png" alt="captura" width="400" height="20" />
+  <img src="Img/paso9-2.png" alt="captura" width="400" height="250" />
 </p>
 
 
