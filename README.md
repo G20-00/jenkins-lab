@@ -138,7 +138,7 @@ Se confirua la `Url` de jenkins
 
 ## Paso 9: Instalar Plugins
 
-En Jenkins, En el apartado de “Tools” configuramos la versión de node que necesitamos, en este caso es la 10.15.2
+En Jenkins, En el apartado de `Tools` configuramos la versión de node que necesitamos, en este caso es la `10.15.2`
 
 <p align="left">
   <img src="Img/paso9.png" alt="captura" width="400" height="250" />
@@ -161,7 +161,7 @@ En Jenkins, En el apartado de “Tools” configuramos la versión de node que n
 </p>
 
 ### Haremos la configuración
-  -	Damos la url del repositorio de nuestro proyecto y seleccionamos la rama en mi caso la `main`
+  -	Damos la `Url` del repositorio de nuestro proyecto y seleccionamos la rama en mi caso la `main`
 
 <p align="left">
   <img src="Img/paso10-2.png" alt="captura" width="400" height="250" />
@@ -199,7 +199,7 @@ node app.js
 
 ## Paso 11: Crear un Pipeline
 
-  -	Ejecutaremos el pipeline, luego iremos a Console Ouput, para ver la dirección del servidor que esta corriendo.
+  -	Ejecutaremos el pipeline, luego iremos a `Console Ouput`, para ver la dirección del servidor que esta corriendo.
 
 <p align="left">
   <img src="Img/paso11.png" alt="captura" width="400" height="250" />
