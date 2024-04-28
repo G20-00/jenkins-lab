@@ -157,7 +157,7 @@ En Jenkins, En el apartado de “Tools” configuramos la versión de node que n
   -	Elegimos `Crear proyecto de estilo libre`
 
 <p align="left">
-  <img src="Img/paso10.png" alt="captura" width="400" height="20" />
+  <img src="Img/paso10.png" alt="captura" width="400" height="250" />
 </p>
 
 ### Haremos la configuración
